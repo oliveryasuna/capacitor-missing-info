@@ -3,7 +3,6 @@ import {defineConfig} from 'vitest/config';
 import path from 'path';
 import vitePluginTsconfigPaths from './vite-plugin-tsconfig-paths';
 
-
 const vitestCommonConfig = ((dirname: string): UserConfig =>
     defineConfig({
       plugins: [

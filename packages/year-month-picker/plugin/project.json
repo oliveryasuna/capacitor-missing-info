@@ -3,6 +3,31 @@
   "name": "year-month-picker-plugin",
   "sourceRoot": "packages/year-month-picker/plugin/src",
   "projectType": "library",
-  "targets": {},
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "dependsOn": ["build:tsc"],
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "packages/year-month-picker/plugin/dist"
+      },
+      "defaultConfiguration": "production",
+      "configurations": {
+        "production": {
+          "mode": "production"
+        },
+        "development": {
+          "mode": "development"
+        }
+      }
+    },
+    "build:tsc": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "packages/year-month-picker/plugin",
+        "command": "tsc --project tsconfig.lib.json"
+      }
+    }
+  },
   "tags": []
 }
