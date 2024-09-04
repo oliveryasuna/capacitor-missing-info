@@ -7,6 +7,12 @@
     // Emit
     //--------------------------------------------------
 
-    "outDir": "./dist/esm"
+    "outDir": "./dist/esm",
+    "sourceMap": true,
+
+    // Projects
+    //--------------------------------------------------
+
+    "tsBuildInfoFile": "tsconfig.lib.tsbuildinfo"
   }
 }
