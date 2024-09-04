@@ -5,7 +5,7 @@ It is 2024, but Safari on iOS still does
 on the `input[type="month"]` element.
 This project provides a custom picker for year and month selection on iOS.
 
-<img src="../../_assets/year-month-picker-demo-ios.gif" alt="Year Month Picker Demo on iOS" width="300"/>
+<img src="../../_assets/year-month-picker-demo-ios.gif" alt="Year Month Picker Demo on iOS" width="250"/>
 
 ## Modules
 
