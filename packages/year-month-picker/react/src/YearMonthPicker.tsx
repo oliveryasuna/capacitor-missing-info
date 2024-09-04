@@ -1,9 +1,9 @@
 import type {YearMonthPickerProps} from './YearMonthPicker.props';
 import React, {forwardRef, useCallback, useMemo, useState} from 'react';
-import {Capacitor} from '@capacitor/core';
 import {removeProps} from '@oliveryasuna/cmi-utils-react';
 import type {ShowYearMonthPickerResult} from '@oliveryasuna/cmi-year-month-picker-plugin';
 import {YearMonthPicker as YearMonthPickerPlugin} from '@oliveryasuna/cmi-year-month-picker-plugin';
+import {isIos as isIosUtil} from '@oliveryasuna/cmi-utils-capacitor';
 
 const YearMonthPicker = forwardRef((outerProps: YearMonthPickerProps, outerRef: React.ForwardedRef<HTMLInputElement>): React.ReactNode => {
   // Prevents mistakes in JS.
@@ -11,6 +11,8 @@ const YearMonthPicker = forwardRef((outerProps: YearMonthPickerProps, outerRef: 
   const {onFocus, ...rootProps} = props;
 
   const [node, setNode] = useState<HTMLInputElement | null>(null);
+
+  const isIos = useMemo<boolean>(((): boolean => isIosUtil()), []);
 
   const ref = useCallback(
       ((instance: (HTMLInputElement | null)): void => {
@@ -49,7 +51,7 @@ const YearMonthPicker = forwardRef((outerProps: YearMonthPickerProps, outerRef: 
 
   const handleFocus = useCallback(
       ((event: React.FocusEvent<HTMLInputElement>): void => {
-        if(Capacitor.getPlatform() === 'ios') {
+        if(isIos) {
           event.preventDefault();
 
           const value: (string | undefined) = getValue();
@@ -80,10 +82,10 @@ const YearMonthPicker = forwardRef((outerProps: YearMonthPickerProps, outerRef: 
 
         onFocus?.(event);
       }),
-      [onFocus, node, getValue, setValue]
+      [onFocus, node, isIos, getValue, setValue]
   );
 
-  return (<input ref={ref} type="text" inputMode="none" onFocus={handleFocus} {...rootProps}/>);
+  return (<input ref={ref} {...(isIos ? {type: 'text', inputMode: 'none'} : {type: 'month'})} onFocus={handleFocus} {...rootProps}/>);
 });
 
 export {

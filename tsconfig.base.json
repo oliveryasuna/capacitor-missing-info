@@ -29,6 +29,8 @@
     "module": "ESNext",
     "moduleResolution": "node",
     "paths": {
+      "@oliveryasuna/cmi-utils-capacitor": ["./packages/utils/capacitor/src/index.ts"],
+      "@oliveryasuna/cmi-utils-ionic": ["./packages/utils/ionic/src/index.ts"],
       "@oliveryasuna/cmi-utils-react": ["./packages/utils/react/src/index.ts"],
       "@oliveryasuna/cmi-year-month-picker-plugin": ["./packages/year-month-picker/plugin/src/index.ts"],
       "@oliveryasuna/cmi-year-month-picker-react": ["./packages/year-month-picker/react/src/index.ts"]
