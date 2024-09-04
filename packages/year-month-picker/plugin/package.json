@@ -41,6 +41,9 @@
     "postinstall": "npx syncpack fix-mismatches",
     "prepare": "nx run year-month-picker-plugin:build --verbose && cp ../../../LICENSE ./LICENSE"
   },
+  "peerDependencies": {
+    "@capacitor/core": "^6.0.0"
+  },
   "capacitor": {
     "ios": {
       "src": "ios"
