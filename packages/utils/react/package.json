@@ -1,0 +1,29 @@
+{
+  "name": "@oliveryasuna/cmi-utils-react",
+  "version": "1.0.0",
+  "description": "React utilities for Capacitor Missing Info plugins.",
+  "main": "",
+  "module": "",
+  "types": "",
+  "unpkg": "",
+  "files": [],
+  "author": "Oliver Yasuna",
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/oliveryasuna/capacitor-missing-info",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oliveryasuna/capacitor-missing-info",
+    "directory": "packages/utils/react"
+  },
+  "bugs": {
+    "url": "https://github.com/oliveryasuna/capacitor-missing-info/issues"
+  },
+  "keywords": [
+    "capacitor",
+    "plugin",
+    "native",
+    "ionic",
+    "react",
+    "utils"
+  ]
+}

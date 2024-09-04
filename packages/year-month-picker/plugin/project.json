@@ -1,0 +1,8 @@
+{
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "name": "year-month-picker-plugin",
+  "sourceRoot": "packages/year-month-picker/plugin/src",
+  "projectType": "library",
+  "targets": {},
+  "tags": []
+}

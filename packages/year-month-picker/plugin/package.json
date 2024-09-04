@@ -1,0 +1,42 @@
+{
+  "name": "@oliveryasuna/cmi-year-month-picker-plugin",
+  "version": "1.0.0",
+  "description": "A Capacitor plugin for selecting a year and month.",
+  "main": "dist/plugin.cjs.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "unpkg": "dist/plugin.js",
+  "files": [
+    "dist/",
+    "ios/Sources",
+    "ios/Tests",
+    "Package.swift",
+    "OliveryasunaCmiYearMonthPickerPlugin.podspec"
+  ],
+  "author": "Oliver Yasuna",
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/oliveryasuna/capacitor-missing-info",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oliveryasuna/capacitor-missing-info",
+    "directory": "packages/year-month-picker/plugin"
+  },
+  "bugs": {
+    "url": "https://github.com/oliveryasuna/capacitor-missing-info/issues"
+  },
+  "keywords": [
+    "capacitor",
+    "plugin",
+    "native",
+    "ionic",
+    "input",
+    "date",
+    "year",
+    "month"
+  ],
+  "capacitor": {
+    "ios": {
+      "src": "ios"
+    }
+  }
+}

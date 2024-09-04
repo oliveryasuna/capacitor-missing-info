@@ -1,0 +1,11 @@
+{
+  "name": "year-month-picker-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@capacitor/core": "6.1.2",
+    "@capacitor/ios": "6.1.2",
+    "@oliveryasuna/cmi-year-month-picker-plugin": "file:../plugin"
+  }
+}

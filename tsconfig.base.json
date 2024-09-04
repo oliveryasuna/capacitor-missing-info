@@ -1,0 +1,68 @@
+{
+  "compilerOptions": {
+    // Type checking
+    //--------------------------------------------------
+
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "alwaysStrict": true,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "useUnknownInCatchVariables": true,
+
+    // Modules
+    //--------------------------------------------------
+
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "paths": {
+      "@oliveryasuna/cmi-utils-react": ["./packages/utils/react/src/index.ts"],
+      "@oliveryasuna/cmi-year-month-picker-plugin": ["./packages/year-month-picker/plugin/src/index.ts"],
+      "@oliveryasuna/cmi-year-month-picker-react": ["./packages/year-month-picker/react/src/index.ts"]
+    },
+    "resolveJsonModule": true,
+
+    // Emit
+    //--------------------------------------------------
+
+    "declaration": true,
+    "importHelpers": true,
+
+    // Interop constraints
+    //--------------------------------------------------
+
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    // Language and environment
+    //--------------------------------------------------
+
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "ES2022",
+
+    // Projects
+    //--------------------------------------------------
+
+    "incremental": true,
+
+    // Completeness
+    //--------------------------------------------------
+
+    "skipLibCheck": true
+  }
+}

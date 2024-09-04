@@ -1,0 +1,71 @@
+{
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "name": "year-month-picker-demo",
+  "sourceRoot": "packages/year-month-picker/demo/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/year-month-picker/demo"
+      },
+      "defaultConfiguration": "production",
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "options": {
+        "buildTarget": "year-month-picker-demo:build"
+      },
+      "defaultConfiguration": "development",
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "cap-open": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "packages/year-month-picker/demo",
+        "command": "cap open ios"
+      }
+    },
+    "cap-sync": {
+      "executor": "nx:run-commands",
+      "defaultConfiguration": "production",
+      "options": {
+        "cwd": "packages/year-month-picker/demo"
+      },
+      "configurations": {
+        "development": {
+          "env": {
+            "MODE": "development",
+            "PLATFORM": "ios"
+          },
+          "command": "cap sync ios"
+        },
+        "production": {
+          "env": {
+            "MODE": "production"
+          },
+          "command": "cap sync"
+        }
+      }
+    }
+  },
+  "tags": []
+}

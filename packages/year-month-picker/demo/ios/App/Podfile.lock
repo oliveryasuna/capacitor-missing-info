@@ -1,0 +1,28 @@
+PODS:
+  - Capacitor (6.1.2):
+    - CapacitorCordova
+  - CapacitorCordova (6.1.2)
+  - OliveryasunaCmiYearMonthPickerPlugin (1.0.0):
+    - Capacitor
+
+DEPENDENCIES:
+  - "Capacitor (from `../../node_modules/.pnpm/@capacitor+ios@6.1.2_@capacitor+core@6.1.2/node_modules/@capacitor/ios`)"
+  - "CapacitorCordova (from `../../node_modules/.pnpm/@capacitor+ios@6.1.2_@capacitor+core@6.1.2/node_modules/@capacitor/ios`)"
+  - "OliveryasunaCmiYearMonthPickerPlugin (from `../../node_modules/.pnpm/@oliveryasuna+cmi-year-month-picker-plugin@file+..+plugin/node_modules/@oliveryasuna/cmi-year-month-picker-plugin`)"
+
+EXTERNAL SOURCES:
+  Capacitor:
+    :path: "../../node_modules/.pnpm/@capacitor+ios@6.1.2_@capacitor+core@6.1.2/node_modules/@capacitor/ios"
+  CapacitorCordova:
+    :path: "../../node_modules/.pnpm/@capacitor+ios@6.1.2_@capacitor+core@6.1.2/node_modules/@capacitor/ios"
+  OliveryasunaCmiYearMonthPickerPlugin:
+    :path: "../../node_modules/.pnpm/@oliveryasuna+cmi-year-month-picker-plugin@file+..+plugin/node_modules/@oliveryasuna/cmi-year-month-picker-plugin"
+
+SPEC CHECKSUMS:
+  Capacitor: 679f9673fdf30597493a6362a5d5bf233d46abc2
+  CapacitorCordova: f48c89f96c319101cd2f0ce8a2b7449b5fb8b3dd
+  OliveryasunaCmiYearMonthPickerPlugin: 1ae2dc00217c36f7fadff2be83e103c7ea651ce7
+
+PODFILE CHECKSUM: 074fcc43d3207600282d2052f1e01695e6ffc612
+
+COCOAPODS: 1.15.2
