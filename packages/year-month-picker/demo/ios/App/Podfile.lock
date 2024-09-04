@@ -8,7 +8,7 @@ PODS:
 DEPENDENCIES:
   - "Capacitor (from `../../node_modules/.pnpm/@capacitor+ios@6.1.2_@capacitor+core@6.1.2/node_modules/@capacitor/ios`)"
   - "CapacitorCordova (from `../../node_modules/.pnpm/@capacitor+ios@6.1.2_@capacitor+core@6.1.2/node_modules/@capacitor/ios`)"
-  - "OliveryasunaCmiYearMonthPickerPlugin (from `../../node_modules/.pnpm/@oliveryasuna+cmi-year-month-picker-plugin@file+..+plugin/node_modules/@oliveryasuna/cmi-year-month-picker-plugin`)"
+  - "OliveryasunaCmiYearMonthPickerPlugin (from `../../node_modules/.pnpm/@oliveryasuna+cmi-year-month-picker-plugin@file+..+plugin_@capacitor+core@6.1.2/node_modules/@oliveryasuna/cmi-year-month-picker-plugin`)"
 
 EXTERNAL SOURCES:
   Capacitor:
@@ -16,13 +16,13 @@ EXTERNAL SOURCES:
   CapacitorCordova:
     :path: "../../node_modules/.pnpm/@capacitor+ios@6.1.2_@capacitor+core@6.1.2/node_modules/@capacitor/ios"
   OliveryasunaCmiYearMonthPickerPlugin:
-    :path: "../../node_modules/.pnpm/@oliveryasuna+cmi-year-month-picker-plugin@file+..+plugin/node_modules/@oliveryasuna/cmi-year-month-picker-plugin"
+    :path: "../../node_modules/.pnpm/@oliveryasuna+cmi-year-month-picker-plugin@file+..+plugin_@capacitor+core@6.1.2/node_modules/@oliveryasuna/cmi-year-month-picker-plugin"
 
 SPEC CHECKSUMS:
   Capacitor: 679f9673fdf30597493a6362a5d5bf233d46abc2
   CapacitorCordova: f48c89f96c319101cd2f0ce8a2b7449b5fb8b3dd
   OliveryasunaCmiYearMonthPickerPlugin: 1ae2dc00217c36f7fadff2be83e103c7ea651ce7
 
-PODFILE CHECKSUM: 074fcc43d3207600282d2052f1e01695e6ffc612
+PODFILE CHECKSUM: 2eb6ac1c4041673126ae0a006d2d739fdc34ccac
 
 COCOAPODS: 1.15.2

@@ -11,7 +11,7 @@ install! 'cocoapods', :disable_input_output_paths => true
 def capacitor_pods
   pod 'Capacitor', :path => '../../node_modules/.pnpm/@capacitor+ios@6.1.2_@capacitor+core@6.1.2/node_modules/@capacitor/ios'
   pod 'CapacitorCordova', :path => '../../node_modules/.pnpm/@capacitor+ios@6.1.2_@capacitor+core@6.1.2/node_modules/@capacitor/ios'
-  pod 'OliveryasunaCmiYearMonthPickerPlugin', :path => '../../node_modules/.pnpm/@oliveryasuna+cmi-year-month-picker-plugin@file+..+plugin/node_modules/@oliveryasuna/cmi-year-month-picker-plugin'
+  pod 'OliveryasunaCmiYearMonthPickerPlugin', :path => '../../node_modules/.pnpm/@oliveryasuna+cmi-year-month-picker-plugin@file+..+plugin_@capacitor+core@6.1.2/node_modules/@oliveryasuna/cmi-year-month-picker-plugin'
 end
 
 target 'App' do

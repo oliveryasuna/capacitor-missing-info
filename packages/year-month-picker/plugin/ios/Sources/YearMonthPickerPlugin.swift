@@ -29,7 +29,7 @@ public class YearMonthPickerPlugin: CAPPlugin, CAPBridgedPlugin {
         if #available(iOS 13.0, *) {
             traitsView = TraitsView(bridge: bridge, listener: {(style: UIUserInterfaceStyle) in
                 if let currentPicker = self.currentPicker {
-                    currentPicker.applyTheme()
+                    currentPicker.applyTheme(preferredStyle: style)
                 }
             })
         }

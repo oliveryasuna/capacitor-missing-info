@@ -191,7 +191,9 @@ public class YearMonthPicker {
         background.frame.size = view.frame.size
     }
     
-    public func applyTheme() {
+    public func applyTheme(preferredStyle: UIUserInterfaceStyle? = nil) {
+        let style: UIUserInterfaceStyle = preferredStyle ?? (options.theme == .DARK ? .dark : .light)
+        
         var titleFontColorHex: String = "#000000"
         var titleBackgroundColorHex: String = "#ffffff"
         var fontColorHex: String = "#000000"
@@ -199,8 +201,7 @@ public class YearMonthPicker {
         var buttonFontColorHex: String = "#000000"
         var buttonBackgroundColorHex: String = "#ffffff"
 
-        // TODO: Doesn't work properly when device switches.
-        if #available(iOS 13.0, *), (options.theme == .DARK || (options.theme == nil && UITraitCollection.current.userInterfaceStyle == .dark)) {
+        if style == .dark {
             titleFontColorHex = "#fafafa"
             titleBackgroundColorHex = "#121212"
             fontColorHex = "#fafafa"
@@ -224,7 +225,7 @@ public class YearMonthPicker {
         cancelButton.backgroundColor = buttonBackgroundColor
         
         if #available(iOS 13.0, *) {
-            picker.overrideUserInterfaceStyle = options.theme == .DARK ? .dark : .light
+            picker.overrideUserInterfaceStyle = style
         } else {
             picker.setValue(fontColor, forKey: "textColor")
         }
