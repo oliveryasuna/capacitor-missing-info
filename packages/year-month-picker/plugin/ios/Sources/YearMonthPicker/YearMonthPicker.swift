@@ -198,7 +198,8 @@ public class YearMonthPicker {
         var backgroundColorHex: String = "#ffffff"
         var buttonFontColorHex: String = "#000000"
         var buttonBackgroundColorHex: String = "#ffffff"
-        
+
+        // TODO: Doesn't work properly when device switches.
         if #available(iOS 13.0, *), (options.theme == .DARK || (options.theme == nil && UITraitCollection.current.userInterfaceStyle == .dark)) {
             titleFontColorHex = "#fafafa"
             titleBackgroundColorHex = "#121212"
