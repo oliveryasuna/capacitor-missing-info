@@ -1,23 +1,33 @@
 {
-  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "name": "year-month-picker-plugin",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/year-month-picker/plugin/src",
   "projectType": "library",
+  "tags": [],
   "targets": {
     "build": {
-      "executor": "@nx/vite:build",
-      "dependsOn": ["build:tsc"],
-      "outputs": ["{options.outputPath}"],
+      "executor": "nx:run-commands",
+      "dependsOn": [
+        "build:tsc"
+      ],
+      "outputs": [
+        "{projectRoot}/dist"
+      ],
       "options": {
-        "outputPath": "packages/year-month-picker/plugin/dist"
+        "cwd": "packages/year-month-picker/plugin",
+        "command": "vite build"
       },
       "defaultConfiguration": "production",
       "configurations": {
-        "production": {
-          "mode": "production"
-        },
         "development": {
-          "mode": "development"
+          "env": {
+            "MODE": "development"
+          }
+        },
+        "production": {
+          "env": {
+            "MODE": "production"
+          }
         }
       }
     },
@@ -28,6 +38,5 @@
         "command": "tsc --project tsconfig.lib.json"
       }
     }
-  },
-  "tags": []
+  }
 }

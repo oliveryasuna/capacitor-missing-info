@@ -7,7 +7,7 @@
   "types": "dist/esm/index.d.ts",
   "unpkg": "dist/plugin.js",
   "files": [
-    "../../../LICENSE",
+    "LICENSE",
     "dist/",
     "ios/Sources",
     "ios/Tests",
@@ -36,6 +36,11 @@
     "year",
     "month"
   ],
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "npx syncpack fix-mismatches",
+    "prepare": "nx run year-month-picker-plugin:build --verbose && cp ../../../LICENSE ./LICENSE"
+  },
   "capacitor": {
     "ios": {
       "src": "ios"

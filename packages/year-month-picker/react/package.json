@@ -23,5 +23,9 @@
     "year",
     "month",
     "react"
-  ]
+  ],
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "npx syncpack fix-mismatches"
+  }
 }
