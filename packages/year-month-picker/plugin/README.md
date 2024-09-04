@@ -14,7 +14,11 @@ npm install @oliveryasuna/cmi-year-month-picker-plugin
 npx cap sync
 ```
 
-## Example
+## Examples
+
+### Basic usage
+
+Create an input with a value and minimum and maximum values.
 
 ```typescript
 import {YearMonthPicker} from '@oliveryasuna/cmi-year-month-picker-plugin';
@@ -26,6 +30,28 @@ YearMonthPicker.showYearMonthPicker({
   max: '2024-12'
 }).then(({value}) => {
   console.log(value);
+});
+```
+
+### Theme
+
+By default, the picker will use the system theme.
+You can override this by specifying the `theme` property in the options.
+
+```typescript
+YearMonthPicker.showYearMonthPicker({
+  theme: 'dark'
+});
+```
+
+Note that, if the picker is open and the system theme changes, the picker theme
+will update accordingly.
+To prevent this, you can set the `forceTheme` property to `true`.
+
+```typescript
+YearMonthPicker.showYearMonthPicker({
+  theme: 'dark',
+  forceTheme: true
 });
 ```
 
@@ -74,11 +100,11 @@ import {CapacitorConfig} from '@capacitor/cli';
 const config: CapacitorConfig = {
   plugins: {
     YearMonthPicker: {
-      theme: 'light',
       title: 'Select a month and year',
       pickerStyle: 'wheels',
       doneButtonLabel: 'OK',
-      cancelButtonLabel: 'Cancel'
+      cancelButtonLabel: 'Cancel',
+      theme: 'light'
     }
   }
 };
