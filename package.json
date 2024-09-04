@@ -28,13 +28,13 @@
     "chore:unused-dependencies": "nx generate @trumbitta/nx-plugin-unused-deps:check --no-interactive"
   },
   "dependencies": {
+    "@capacitor/core": "6.1.2",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   },
   "devDependencies": {
     "@capacitor/android": "6.1.2",
     "@capacitor/cli": "6.1.2",
-    "@capacitor/core": "6.1.2",
     "@capacitor/docgen": "0.2.2",
     "@capacitor/ios": "6.1.2",
     "@nx/eslint-plugin": "19.6.4",

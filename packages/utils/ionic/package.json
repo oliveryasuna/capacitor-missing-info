@@ -1,7 +1,7 @@
 {
-  "name": "@oliveryasuna/cmi-utils-react",
+  "name": "@oliveryasuna/cmi-utils-ionic",
   "version": "1.0.0",
-  "description": "React utilities for Capacitor Missing Info.",
+  "description": "Ionic utilities.",
   "main": "",
   "module": "",
   "types": "",
@@ -13,7 +13,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/oliveryasuna/capacitor-missing-info",
-    "directory": "packages/utils/react"
+    "directory": "packages/utils/ionic"
   },
   "bugs": {
     "url": "https://github.com/oliveryasuna/capacitor-missing-info/issues"
@@ -23,7 +23,6 @@
     "plugin",
     "native",
     "ionic",
-    "react",
     "utils"
   ]
 }

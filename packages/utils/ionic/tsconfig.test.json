@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "./src/**/*.ts",
+    "./test/**/*.ts"
+  ],
+  "compilerOptions": {
+    // Modules
+    //--------------------------------------------------
+
+    "types": [
+      "vitest/globals"
+    ]
+  }
+}

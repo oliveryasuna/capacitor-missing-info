@@ -7,6 +7,7 @@
   "types": "dist/esm/index.d.ts",
   "unpkg": "dist/plugin.js",
   "files": [
+    "../../../LICENSE",
     "dist/",
     "ios/Sources",
     "ios/Tests",
