@@ -8,6 +8,7 @@
 import Foundation
 import Capacitor
 
+// Based on https://github.com/aparajita/capacitor-dark-mode.
 public class TraitsView: UIView {
     
     let listener: ((UIUserInterfaceStyle) -> Void)?

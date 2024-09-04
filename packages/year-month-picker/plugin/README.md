@@ -31,13 +31,20 @@ YearMonthPicker.showYearMonthPicker({
 
 ## Configuration
 
-| Property                | Type                              | Description                       | Default                      | Since |
-|-------------------------|-----------------------------------|-----------------------------------|------------------------------|-------|
-| **`theme`**             | <code>'light' \| 'dark'</code>    | The theme color.                  |                              | 1.0.0 |
-| **`title`**             | <code>string</code>               | The title of the picker container | <code>'Select a date'</code> | 1.0.0 |
-| **`pickerStyle`**       | <code>'inline' \| 'wheels'</code> | The style of the picker.          | <code>'wheels'</code>        | 1.0.0 |
-| **`doneButtonLabel`**   | <code>string</code>               | The label of the done button.     | <code>'Done'</code>          | 1.0.0 |
-| **`cancelButtonLabel`** | <code>string</code>               | The label of the cancel button.   | <code>'Cancel'</code>        | 1.0.0 |
+| Property                    | Type                              | Description                                             | Default                      | Since |
+|-----------------------------|-----------------------------------|---------------------------------------------------------|------------------------------|-------|
+| **`title`**                 | <code>string</code>               | The title of the picker container                       | <code>'Select a date'</code> | 1.0.0 |
+| **`pickerStyle`**           | <code>'inline' \| 'wheels'</code> | The style of the picker.                                | <code>'wheels'</code>        | 1.0.0 |
+| **`doneButtonLabel`**       | <code>string</code>               | The label of the done button.                           | <code>'Done'</code>          | 1.0.0 |
+| **`cancelButtonLabel`**     | <code>string</code>               | The label of the cancel button.                         | <code>'Cancel'</code>        | 1.0.0 |
+| **`theme`**                 | <code>'light' \| 'dark'</code>    | The theme color.                                        |                              | 1.0.0 |
+| **`forceTheme`**            | <code>boolean</code>              | Force the specified theme, overriding the system theme. | <code>false</code>           | 1.0.0 |
+| **`titleFontColor`**        | <code>`#${string}`</code>         | The title font color.                                   |                              | 1.0.0 |
+| **`titleBackgroundColor`**  | <code>`#${string}`</code>         | The title background color.                             |                              | 1.0.0 |
+| **`fontColor`**             | <code>`#${string}`</code>         | The font color.                                         |                              | 1.0.0 |
+| **`backgroundColor`**       | <code>`#${string}`</code>         | The background color.                                   |                              | 1.0.0 |
+| **`buttonFontColor`**       | <code>`#${string}`</code>         | The button font color.                                  |                              | 1.0.0 |
+| **`buttonBackgroundColor`** | <code>`#${string}`</code>         | The button background color.                            |                              | 1.0.0 |
 
 ### Examples
 
@@ -104,16 +111,23 @@ Show the year and month picker.
 
 #### ShowYearMonthPickerOptions
 
-| Property                | Type                              | Description                                | Default                      | Since |
-|-------------------------|-----------------------------------|--------------------------------------------|------------------------------|-------|
-| **`value`**             | <code>string</code>               | The initial value, in the format `yyyy-MM` |                              | 1.0.0 |
-| **`min`**               | <code>string</code>               | The minimum value, in the format `yyyy-MM` |                              | 1.0.0 |
-| **`max`**               | <code>string</code>               | The maximum value, in the format `yyyy-MM` |                              | 1.0.0 |
-| **`theme`**             | <code>'light' \| 'dark'</code>    | The theme color.                           |                              | 1.0.0 |
-| **`title`**             | <code>string</code>               | The title of the picker container.         | <code>'Select a date'</code> | 1.0.0 |
-| **`pickerStyle`**       | <code>'inline' \| 'wheels'</code> | The style of the picker.                   | <code>'wheels'</code>        | 1.0.0 |
-| **`doneButtonLabel`**   | <code>string</code>               | The label of the done button.              | <code>'Done'</code>          | 1.0.0 |
-| **`cancelButtonLabel`** | <code>string</code>               | The label of the cancel button.            | <code>'Cancel'</code>        | 1.0.0 |
+| Property                    | Type                              | Description                                             | Default                      | Since |
+|-----------------------------|-----------------------------------|---------------------------------------------------------|------------------------------|-------|
+| **`value`**                 | <code>string</code>               | The initial value, in the format `yyyy-MM`              |                              | 1.0.0 |
+| **`min`**                   | <code>string</code>               | The minimum value, in the format `yyyy-MM`              |                              | 1.0.0 |
+| **`max`**                   | <code>string</code>               | The maximum value, in the format `yyyy-MM`              |                              | 1.0.0 |
+| **`title`**                 | <code>string</code>               | The title of the picker container.                      | <code>'Select a date'</code> | 1.0.0 |
+| **`pickerStyle`**           | <code>'inline' \| 'wheels'</code> | The style of the picker.                                | <code>'wheels'</code>        | 1.0.0 |
+| **`doneButtonLabel`**       | <code>string</code>               | The label of the done button.                           | <code>'Done'</code>          | 1.0.0 |
+| **`cancelButtonLabel`**     | <code>string</code>               | The label of the cancel button.                         | <code>'Cancel'</code>        | 1.0.0 |
+| **`theme`**                 | <code>'light' \| 'dark'</code>    | The theme color.                                        |                              | 1.0.0 |
+| **`forceTheme`**            | <code>boolean</code>              | Force the specified theme, overriding the system theme. | <code>false</code>           | 1.0.0 |
+| **`titleFontColor`**        | <code>`#${string}`</code>         | The title font color.                                   |                              | 1.0.0 |
+| **`titleBackgroundColor`**  | <code>`#${string}`</code>         | The title background color.                             |                              | 1.0.0 |
+| **`fontColor`**             | <code>`#${string}`</code>         | The font color.                                         |                              | 1.0.0 |
+| **`backgroundColor`**       | <code>`#${string}`</code>         | The background color.                                   |                              | 1.0.0 |
+| **`buttonFontColor`**       | <code>`#${string}`</code>         | The button font color.                                  |                              | 1.0.0 |
+| **`buttonBackgroundColor`** | <code>`#${string}`</code>         | The button background color.                            |                              | 1.0.0 |
 
 #### ShowYearMonthPickerResult
 

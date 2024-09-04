@@ -62,11 +62,18 @@ const YearMonthPicker = forwardRef((outerProps: YearMonthPickerProps, outerRef: 
             ...(((value !== undefined) && (value !== '')) && {value: value}),
             ...(((min !== undefined) && (min !== '')) && {min: min}),
             ...(((max !== undefined) && (max !== '')) && {max: max}),
-            ...((props.nativeTheme !== undefined) && {theme: props.nativeTheme}),
             ...((props.nativeTitle !== undefined) && {title: props.nativeTitle}),
             ...((props.nativePickerStyle !== undefined) && {pickerStyle: props.nativePickerStyle}),
             ...((props.nativeDoneButtonLabel !== undefined) && {doneButtonLabel: props.nativeDoneButtonLabel}),
-            ...((props.nativeCancelButtonLabel !== undefined) && {cancelButtonLabel: props.nativeCancelButtonLabel})
+            ...((props.nativeCancelButtonLabel !== undefined) && {cancelButtonLabel: props.nativeCancelButtonLabel}),
+            ...((props.nativeTheme !== undefined) && {theme: props.nativeTheme}),
+            ...((props.nativeForceTheme !== undefined) && {forceTheme: props.nativeForceTheme}),
+            ...((props.nativeTitleFontColor !== undefined) && {titleFontColor: props.nativeTitleFontColor}),
+            ...((props.nativeTitleBackgroundColor !== undefined) && {titleBackgroundColor: props.nativeTitleBackgroundColor}),
+            ...((props.nativeFontColor !== undefined) && {fontColor: props.nativeFontColor}),
+            ...((props.nativeBackgroundColor !== undefined) && {backgroundColor: props.nativeBackgroundColor}),
+            ...((props.nativeButtonFontColor !== undefined) && {buttonFontColor: props.nativeButtonFontColor}),
+            ...((props.nativeButtonBackgroundColor !== undefined) && {buttonBackgroundColor: props.nativeButtonBackgroundColor})
           })
               .then((result: ShowYearMonthPickerResult): void => {
                 node!.blur();

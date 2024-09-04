@@ -192,7 +192,20 @@ public class YearMonthPicker {
     }
     
     public func applyTheme(preferredStyle: UIUserInterfaceStyle? = nil) {
-        let style: UIUserInterfaceStyle = preferredStyle ?? (options.theme == .DARK ? .dark : .light)
+        let style: UIUserInterfaceStyle
+        
+        if let theme = options.theme, (options.forceTheme || preferredStyle == nil) {
+            switch theme {
+            case .DARK:
+                style = .dark
+            case .LIGHT:
+                fallthrough
+            default:
+                style = .light
+            }
+        } else {
+            style = preferredStyle ?? UITraitCollection.current.userInterfaceStyle
+        }
         
         var titleFontColorHex: String = "#000000"
         var titleBackgroundColorHex: String = "#ffffff"
@@ -210,25 +223,31 @@ public class YearMonthPicker {
             buttonBackgroundColorHex = "#121212"
         }
         
-        // TODO: From options.
-        let titleFontColor = UIColor.capacitor.color(fromHex: titleFontColorHex)
-        let titleBackgroundColor = UIColor.capacitor.color(fromHex: titleBackgroundColorHex)
-        let fontColor = UIColor.capacitor.color(fromHex: fontColorHex)
-        let backgroundColor = UIColor.capacitor.color(fromHex: backgroundColorHex)
-        let buttonFontColor = UIColor.capacitor.color(fromHex: buttonFontColorHex)
-        let buttonBackgroundColor = UIColor.capacitor.color(fromHex: buttonBackgroundColorHex)
+        let titleFontColor = UIColor.capacitor.color(fromHex: options.titleFontColor ?? titleFontColorHex)
+        let titleBackgroundColor = UIColor.capacitor.color(fromHex: options.titleBackgroundColor ?? titleBackgroundColorHex)
+        let fontColor = UIColor.capacitor.color(fromHex: options.fontColor ?? fontColorHex)
+        let backgroundColor = UIColor.capacitor.color(fromHex: options.backgroundColor ?? backgroundColorHex)
+        let buttonFontColor = UIColor.capacitor.color(fromHex: options.buttonFontColor ?? buttonFontColorHex)
+        let buttonBackgroundColor = UIColor.capacitor.color(fromHex: options.buttonBackgroundColor ?? buttonBackgroundColorHex)
         
         doneButton.setTitleColor(buttonFontColor, for: .normal)
         cancelButton.setTitleColor(buttonFontColor, for: .normal)
         
         doneButton.backgroundColor = buttonBackgroundColor
         cancelButton.backgroundColor = buttonBackgroundColor
-        
-        if #available(iOS 13.0, *) {
-            picker.overrideUserInterfaceStyle = style
-        } else {
+
+        if let fontColorOption = options.fontColor {
+            // Always use the font color from the options.
             picker.setValue(fontColor, forKey: "textColor")
+        } else {
+            if #available(iOS 13.0, *) {
+                picker.overrideUserInterfaceStyle = style
+            } else {
+                picker.setValue(fontColor, forKey: "textColor")
+            }
         }
+
+
         
         title.textColor = titleFontColor
         title.backgroundColor = titleBackgroundColor

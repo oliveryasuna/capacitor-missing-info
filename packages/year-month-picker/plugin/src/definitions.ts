@@ -7,16 +7,10 @@ declare module '@capacitor/cli' {
       //--------------------------------------------------
 
       /**
-       * The theme color.
-       *
-       * @default 'light'
-       */
-      theme?: ('light' | 'dark');
-
-      /**
        * The title of the picker container.
        *
        * @default 'Select a date'
+       * @since 1.0.0
        */
       title?: string;
 
@@ -24,6 +18,7 @@ declare module '@capacitor/cli' {
        * The style of the picker.
        *
        * @default 'wheels'
+       * @since 1.0.0
        */
       pickerStyle?: ('inline' | 'wheels');
 
@@ -31,14 +26,68 @@ declare module '@capacitor/cli' {
        * The label of the done button.
        *
        * @default 'Done'
+       * @since 1.0.0
        */
       doneButtonLabel?: string;
       /**
        * The label of the cancel button.
        *
        * @default 'Cancel'
+       * @since 1.0.0
        */
       cancelButtonLabel?: string;
+
+      /**
+       * The theme color.
+       *
+       * @default 'light'
+       * @since 1.0.0
+       */
+      theme?: ('light' | 'dark');
+      /**
+       * Force the specified theme color, overriding the system theme.
+       *
+       * @default false
+       * @since 1.0.0
+       */
+      forceTheme?: boolean;
+
+      /**
+       * The title font color.
+       *
+       * @since 1.0.0
+       */
+      titleFontColor?: `#${string}`;
+      /**
+       * The title background color.
+       *
+       * @since 1.0.0
+       */
+      titleBackgroundColor?: `#${string}`;
+      /**
+       * The font color.
+       *
+       * @since 1.0.0
+       */
+      fontColor?: `#${string}`;
+      /**
+       * The background color.
+       *
+       * @since 1.0.0
+       */
+      backgroundColor?: `#${string}`;
+      /**
+       * The button font color.
+       *
+       * @since 1.0.0
+       */
+      buttonFontColor?: `#${string}`;
+      /**
+       * The button background color.
+       *
+       * @since 1.0.0
+       */
+      buttonBackgroundColor?: `#${string}`;
     };
   }
 }
@@ -63,13 +112,6 @@ interface ShowYearMonthPickerOptions {
 
   // UI
   //--------------------------------------------------
-
-  /**
-   * The theme color.
-   *
-   * @default 'light'
-   */
-  theme?: ('light' | 'dark');
 
   /**
    * The title of the picker container.
@@ -97,6 +139,55 @@ interface ShowYearMonthPickerOptions {
    * @default 'Cancel'
    */
   cancelButtonLabel?: string;
+
+  /**
+   * The theme color.
+   */
+  theme?: ('light' | 'dark');
+  /**
+   * Force the specified theme color, overriding the system theme.
+   *
+   * @default false
+   * @since 1.0.0
+   */
+  forceTheme?: boolean;
+
+  /**
+   * The title font color.
+   *
+   * @since 1.0.0
+   */
+  titleFontColor?: `#${string}`;
+  /**
+   * The title background color.
+   *
+   * @since 1.0.0
+   */
+  titleBackgroundColor?: `#${string}`;
+  /**
+   * The font color.
+   *
+   * @since 1.0.0
+   */
+  fontColor?: `#${string}`;
+  /**
+   * The background color.
+   *
+   * @since 1.0.0
+   */
+  backgroundColor?: `#${string}`;
+  /**
+   * The button font color.
+   *
+   * @since 1.0.0
+   */
+  buttonFontColor?: `#${string}`;
+  /**
+   * The button background color.
+   *
+   * @since 1.0.0
+   */
+  buttonBackgroundColor?: `#${string}`;
 }
 
 interface ShowYearMonthPickerResult {

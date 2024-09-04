@@ -110,26 +110,6 @@ public class YearMonthPickerPlugin: CAPPlugin, CAPBridgedPlugin {
                 
                 return nil
             }(),
-            theme: {
-                if let theme = call.getString("theme") ?? getConfig().getString("theme") {
-                    switch theme {
-                    case "dark":
-                        return .DARK
-                    case "light":
-                        return .LIGHT
-                    default:
-                        if #available(iOS 13.0, *), UITraitCollection.current.userInterfaceStyle == .dark {
-                            return .DARK
-                        }
-                    }
-                }
-                
-                if #available(iOS 13.0, *), UITraitCollection.current.userInterfaceStyle == .dark {
-                    return .DARK
-                }
-                
-                return nil
-            }(),
             title: call.getString("title") ?? getConfig().getString("title"),
             style: {
                 if #available(iOS 13.4, *) {
@@ -146,7 +126,28 @@ public class YearMonthPickerPlugin: CAPPlugin, CAPBridgedPlugin {
                 return .WHEELS
             }(),
             doneButtonLabel: call.getString("doneButtonLabel") ?? getConfig().getString("doneButtonLabel"),
-            cancelButtonLabel: call.getString("cancelButtonLabel") ?? getConfig().getString("cancelButtonLabel")
+            cancelButtonLabel: call.getString("cancelButtonLabel") ?? getConfig().getString("cancelButtonLabel"),
+            theme: {
+                if let theme = call.getString("theme") ?? getConfig().getString("theme") {
+                    switch theme {
+                    case "light":
+                        return .LIGHT
+                    case "dark":
+                        return .DARK
+                    default:
+                        return nil
+                    }
+                }
+                
+                return nil
+            }(),
+            forceTheme: call.getBool("forceTheme"),
+            titleFontColor: call.getString("titleFontColor"),
+            titleBackgroundColor: call.getString("titleBackgroundColor"),
+            fontColor: call.getString("fontColor"),
+            backgroundColor: call.getString("backgroundColor"),
+            buttonFontColor: call.getString("buttonFontColor"),
+            buttonBackgroundColor: call.getString("buttonBackgroundColor")
         )
     }
 

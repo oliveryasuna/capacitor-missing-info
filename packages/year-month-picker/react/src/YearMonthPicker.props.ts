@@ -35,12 +35,6 @@ interface YearMonthPickerPropsBase {
   //--------------------------------------------------
 
   /**
-   * The theme color.
-   *
-   * @since 1.0.0
-   */
-  nativeTheme?: ('light' | 'dark' | undefined);
-  /**
    * The title tof the picker container.
    *
    * @since 1.0.0
@@ -64,6 +58,57 @@ interface YearMonthPickerPropsBase {
    * @since 1.0.0
    */
   nativeCancelButtonLabel?: (string | undefined);
+
+  /**
+   * The theme color.
+   *
+   * @since 1.0.0
+   */
+  nativeTheme?: ('light' | 'dark' | undefined);
+  /**
+   * Force the specified theme color, overriding the system theme.
+   *
+   * @default false
+   * @since 1.0.0
+   */
+  nativeForceTheme?: boolean;
+
+  /**
+   * The title font color.
+   *
+   * @since 1.0.0
+   */
+  nativeTitleFontColor?: `#${string}`;
+  /**
+   * The title background color.
+   *
+   * @since 1.0.0
+   */
+  nativeTitleBackgroundColor?: `#${string}`;
+  /**
+   * The font color.
+   *
+   * @since 1.0.0
+   */
+  nativeFontColor?: `#${string}`;
+  /**
+   * The background color.
+   *
+   * @since 1.0.0
+   */
+  nativeBackgroundColor?: `#${string}`;
+  /**
+   * The button font color.
+   *
+   * @since 1.0.0
+   */
+  nativeButtonFontColor?: `#${string}`;
+  /**
+   * The button background color.
+   *
+   * @since 1.0.0
+   */
+  nativeButtonBackgroundColor?: `#${string}`;
 }
 
 interface YearMonthPickerProps extends YearMonthPickerPropsBase, Omit<React.InputHTMLAttributes<HTMLInputElement>, ((keyof YearMonthPickerPropsBase) | 'type' | 'inputMode')> {
