@@ -29,7 +29,7 @@ A React component for selecting a year and month in Capacitor on iOS.
 
 A Stencil component for selecting a year and month in Capacitor on iOS.
 
-### Svete _(coming soon)_
+### Svelte _(coming soon)_
 
 A Svelte component for selecting a year and month in Capacitor on iOS.
 
